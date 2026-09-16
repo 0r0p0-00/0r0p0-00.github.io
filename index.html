@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Workspace Assistant - Privacy Policy & Terms</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+    header { border-bottom: 2px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+    h1 { font-size: 26px; color: #111827; margin-bottom: 8px; }
+    .subtitle { font-size: 15px; color: var(--text-muted); }
+    section { margin-bottom: 32px; }
+    h2 { font-size: 20px; color: #111827; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    h3 { font-size: 16px; margin: 16px 0 8px; color: #374151; }
+    p, ul { margin-bottom: 14px; font-size: 15px; color: #374151; }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    .badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    footer { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 40px; font-size: 13px; color: var(--text-muted); text-align: center; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Personal Integration</span>
+      <h1>Personal Workspace Assistant</h1>
+      <p class="subtitle">Google Cloud API 連携用アプリケーション ホームページ & プライバシーポリシー</p>
+    </header>
+
+    <section id="about">
+      <h2>1. アプリケーション概要 (About)</h2>
+      <p><strong>Personal Workspace Assistant</strong> は、個人ユーザー（開発者本人）のタスク管理、予定管理、およびメモ整理を自動化・効率化するために開発された専用アシスタントツールです。</p>
+      <p>本ツールは、ユーザー本人の明示的な操作に基づいてGoogle Workspaceの各種サービス（Google Tasks, Google Calendar, Google Drive等）と安全に通信し、日々の作業支援を行います。</p>
+    </section>
+
+    <section id="privacy">
+      <h2>2. プライバシーポリシー (Privacy Policy)</h2>
+      <p>本アプリケーションは、利用者のプライバシーと個人情報の保護を極めて重要視しています。</p>
+      <h3>データの収集と利用目的</h3>
+      <p>本ツールは、Google OAuth 2.0 認証を通じて以下の機能を提供するためにのみ Google API にアクセスします：</p>
+      <ul>
+        <li><strong>Google Tasks API</strong>: ユーザーが依頼したタスクの追加・一覧取得・完了状態の更新。</li>
+        <li><strong>Google Calendar API</strong>: カレンダー上のスケジュールの確認および予定の追加。</li>
+        <li><strong>Google Drive / Sheets / Gmail API</strong>: ユーザーの指定に基づくメモやスプレッドシートへの記録および確認。</li>
+      </ul>
+      <h3>データの保管と第三者提供の禁止</h3>
+      <p>認証情報（OAuthトークン）および取得されたデータは、<strong>利用者のローカルPC環境内にのみ安全に保存</strong>されます。</p>
+      <ul>
+        <li>取得されたデータが開発者を含むいかなる第三者の外部サーバーに送信されることは一切ありません。</li>
+        <li>ユーザーデータを販売、広告目的で利用、または他のサービスへ再配布することは一切行いません。</li>
+      </ul>
+      <h3>Google API ユーザーデータに関する開示</h3>
+      <p>本アプリケーションにおける Google API から受け取った情報の使用および他のアプリへの転送は、制限付き使用（Limited Use）要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a> に完全に準拠しています。</p>
+    </section>
+
+    <section id="terms">
+      <h2>3. 利用規約 (Terms of Service)</h2>
+      <p>本アプリケーションは個人利用を目的として開発されており、提供される機能は現状有姿（As-Is）で提供されます。ユーザー本人の自己責任において安全に運用されます。</p>
+    </section>
+
+    <section id="contact">
+      <h2>4. お問い合わせ・開発者情報</h2>
+      <p>本アプリケーションおよびプライバシーポリシーに関するお問い合わせは、GitHubプロフィールより受け付けております。</p>
+      <p>GitHub: <a href="https://github.com/0r0p0-00" target="_blank" rel="noopener noreferrer">@0r0p0-00</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Personal Workspace Assistant / 0r0p0-00. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
