@@ -60,13 +60,13 @@
         </span>
         <select id="category-select" onchange="changeCategory(this.value)" class="text-xs bg-transparent border border-[var(--border)] rounded-lg px-2 py-1 text-[var(--foreground)] outline-none cursor-pointer">
           <option value="all">全科目ランダム (100問)</option>
-          <option value="ねずみ害虫">🐭 ねずみ害虫</option>
-          <option value="建築構造">🏗️ 建築構造</option>
-          <option value="衛生行政">🏛️ 衛生行政</option>
-          <option value="環境衛生">🌡️ 環境衛生</option>
-          <option value="空気環境">🌬️ 空気環境</option>
-          <option value="給排水">🚰 給排水</option>
-          <option value="清掃">🧹 清掃</option>
+          <option value="ねずみ・昆虫等の防除">🐭 ねずみ・昆虫 (22問)</option>
+          <option value="建築物の構造概論">🏗️ 建築構造 (15問)</option>
+          <option value="空気環境の調整">🌬️ 空気環境 (15問)</option>
+          <option value="建築物衛生行政概論">🏛️ 衛生行政 (14問)</option>
+          <option value="給水及び排水の管理">🚰 給水・排水 (13問)</option>
+          <option value="建築物の環境衛生">🌡️ 環境衛生 (11問)</option>
+          <option value="清掃">🧹 清掃 (10問)</option>
           <option value="review">🔥 ミス問題のみ復習</option>
         </select>
       </div>
@@ -174,7 +174,11 @@
           currentQuestions = shuffle(currentQuestions);
         }
       } else {
-        currentQuestions = shuffle(allQuestions.filter(q => q.subject === cat));
+        // 正式名称・略称どちらでも確実にヒットするマッチング
+        currentQuestions = shuffle(allQuestions.filter(q => {
+          if (!q.subject) return false;
+          return q.subject === cat || q.subject.includes(cat) || cat.includes(q.subject);
+        }));
       }
       currentIndex = 0;
       loadQuestion();
