@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="ssot-sha256" content="0f60f2e1a1ec0613333f24d5856cbbc23e93d54ce34d4d7798613efd6aa771e9">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -49,12 +52,27 @@
     }
   </style>
 </head>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+  if ('caches' in window) {
+    caches.keys().then(names => {
+      for (let name of names) caches.delete(name);
+    });
+  }
+</script>
 <body class="text-[var(--foreground)] antialiased p-2 sm:p-4 select-none flex flex-col justify-center items-center">
   <div class="max-w-xl mx-auto bg-[var(--card)] border border-[var(--border)] rounded-2xl p-4 sm:p-5 shadow-lg backdrop-blur-sm">
     
     <!-- ヘッダー: 科目フィルター & スコア -->
     <div class="flex items-center justify-between gap-2 pb-3 border-b border-[var(--border)]">
       <div class="flex items-center gap-2">
+        <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded font-mono font-bold">v2.2</span>
         <span id="subject-badge" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20">
           全科目
         </span>
