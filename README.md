@@ -7,7 +7,7 @@ GitHub Pages で公開しています。リポジトリ直下の `index.html` �
 ## ファイル構成
 
 - `index.html` — 公開ページの本文。配信の入口なので、リポジトリのルートから動かさない。
-- `css/style.css` — 色、余白、文字サイズ。ページから相対パス `css/style.css` で読み込む。
+- `css/style.css` — 色、余白、文字サイズ。ページから相対パス `css/style.css` で読み込む。幅 480px 以下の調整はファイル末尾の media query にまとめてある。
 - `.gitignore` — OS やエディタが作る一時ファイルをコミットしないようにする。
 
 JavaScript と画像は使っていません。
