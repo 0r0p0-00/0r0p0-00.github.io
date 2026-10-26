@@ -1,0 +1,108 @@
+:root {
+  --primary: #2563eb;
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --bg: #f9fafb;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  padding: 40px 20px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+}
+header { border-bottom: 2px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+h1 { font-size: 26px; color: #111827; margin-bottom: 8px; }
+.subtitle { font-size: 15px; color: var(--text-muted); }
+section { margin-bottom: 32px; }
+h2 { font-size: 20px; color: #111827; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 16px; margin: 16px 0 8px; color: #374151; }
+p, ul { margin-bottom: 14px; font-size: 15px; color: #374151; }
+ul { padding-left: 24px; }
+li { margin-bottom: 6px; }
+.badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+footer { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 40px; font-size: 13px; color: var(--text-muted); text-align: center; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 幅 480px 以下だけ。上のデスクトップ用ルールは変えない。 */
+@media (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    padding: 12px;
+    overflow-wrap: break-word;
+  }
+  .container {
+    padding: 20px 16px;
+  }
+  header {
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+  h2 { font-size: 18px; }
+  .subtitle,
+  p,
+  ul,
+  li {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  section { margin-bottom: 24px; }
+  ul { padding-left: 1.25em; }
+  footer {
+    margin-top: 28px;
+    padding-top: 16px;
+  }
+  a {
+    /* 行の高さは変えず、上下の余白だけタップ範囲を広げる。 */
+    padding-block: 12px;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    touch-action: manipulation;
+  }
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+  code {
+    overflow-wrap: anywhere;
+  }
+  pre,
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
